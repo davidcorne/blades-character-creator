@@ -1,4 +1,4 @@
--
+- 
     DATA = {
         HERITAGES: [
             "Akoros",
@@ -50,13 +50,99 @@
             items: [
                 {
                     name: "Fine hand weapon",
+                    description: "A finely crafted one-handed melee weapon of your choice.",
+                    long_description: "Is this a well-crafted standard weapon, like a perfectly-balanced dagger, or something exotic, like an Iruvian dueling saber or a metal-banded war-club ?",
                     load: 1
                 },
                 {
                     name: "Fine heavy weapon",
+                    description: " A finely crafted two-handed melee weapon of your choice.",
+                    long_description: "A warhammer, a greatsword, a military pike, a battleaxe, etc. A heavy weapon has more reach and hits harder than a standard weapon. This might give you potency when the power or reach of the weapon is a factor.",
                     load: 2
                 },
             ],
             xp: "You addressed a challenge with violence or coercion"
+        },
+        {
+            name: "Hound",
+            description: "A deadly sharpshooter and tracker",
+            special_abilities: [
+                {
+                    name: "sharpshooter",
+                    description: "You can **push yourself** to do one of the following: *make a ranged attack at extreme distance beyond what’s normal for the weapon—unleash a barrage of rapid fire to suppress the enemy.*",
+                    long_description: "When you push yourself to activate this ability, you still get one of the normal benefits of pushing yourself (+1d, +1 effect, etc.) in addition to the special ability. The first use of this ability allows you to attempt long-range sniper shots that would otherwise be impossible with the rudimentary firearms of Duskwall. The second use allows you to keep up a steady rate of fire in a battle (enough to “suppress” a small gang up to six people), rather than stopping for a slow reload or discarding a gun after each shot. When an enemy is suppressed, they’re reluctant to maneuver or attack (usually calling for a fortune roll to see if they can manage it)."
+                }
+            ],
+            starting_actions: [
+                {
+                    action: "hunt",
+                    dots: 2
+                },
+                {
+                    action: "survey",
+                    dots: 1
+                }
+            ],
+            friend_description: "Deadly",
+            friends: [
+                {
+                    name: "Steiner",
+                    short_description: "an assassin",
+                    description: "Perhaps one of your competitors, or a former partner from before you joined the crew?"
+                }
+            ],
+            items: [
+                {
+                    name: "Fine pair of pistols",
+                    description: "A matched pair of handguns, made for greater accuracy, with double barrels that allow for two shots before reloading.",
+                    long_description: "Were your pistols made by Kardera’s Daughters, Templeton & Slane, the Imperial Forge, or some other gunsmith? How do they stand out from the average handgun?",
+                    load: 1
+                },
+                {
+                    name: "Fine long rifle",
+                    description: "A finely crafted hunting rifle, deadly at long range, unwieldy in close quarters.",
+                    long_description: "Long rifles are usually illegal for private citizens in Doskvol, but you have (real or forged) military paperwork for this one.",
+                    load: 2
+                },
+            ],
+            xp: "You addressed a challenge with violence or coercion"
+        },
+        {
+            name: "default",
+            description: "",
+            special_abilities: [
+                {
+                    name: "",
+                    description: "",
+                    long_description: ""
+                }
+            ],
+            starting_actions: [
+                {
+                    action: "",
+                    dots: 2
+                },
+                {
+                    action: "",
+                    dots: 1
+                }
+            ],
+            friend_description: "",
+            friends: [
+                {
+                    name: "",
+                    short_description: "",
+                    description: ""
+                }
+            ],
+            items: [
+                {
+                    name: "",
+                    description: "",
+                    long_description: "",
+                    load: 0
+                }
+            ],
+            xp: ""
         }
     ]
