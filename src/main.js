@@ -2,14 +2,11 @@ BCC = {
 
 }
 
-BCC.HERITAGES = [
-    "Akoros",
-    "The Dagger Isles",
-    "Iruvia",
-    "Severos",
-    "Skovlan",
-    "Tycheros"
-]
 BCC.playbookChange = function() {
-
+    const checkedButton = document.querySelector('input[name="playbook"]:checked')
+    if (checkedButton) {
+        const playbookName = checkedButton.value
+        const playbookData = document.getElementById(playbookName + "-data").innerHTML
+        alert(playbookData)
+    }
 }
