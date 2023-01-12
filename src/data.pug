@@ -1,0 +1,62 @@
+-
+    DATA = {
+        HERITAGES: [
+            "Akoros",
+            "The Dagger Isles",
+            "Iruvia",
+            "Severos",
+            "Skovlan",
+            "Tycheros"
+        ],
+        BACKGROUNDS: [
+            "Academic",
+            "Labor",
+            "Law",
+            "Trade",
+            "Military",
+            "Noble",
+            "Underworld"
+        ]
+    }
+    DATA.PLAYBOOKS = [
+        {
+            name: "Cutter",
+            description: "",
+            special_abilities: [
+                {
+                    name: "battleborn",
+                    description: "You may expend your **special armor** to reduce harm from an attack in combat or to **push yourself** during a fight.",
+                    long_description: "When you use this ability, tick the special armor box on your playbook sheet. If you “reduce harm” that means the level of harm you’re facing right now is reduced by one. If you use this ability to push yourself, you get one of the benefits (+1d, +1 effect, act despite severe harm) but you don’t take 2 stress. Your special armor is restored at the beginning of downtime."
+                }
+            ],
+            starting_actions: [
+                {
+                    action: "skirmish",
+                    dots: 2
+                },
+                {
+                    action: "command",
+                    dots: 1
+                }
+            ],
+            friend_description: "Dangerous",
+            friends: [
+                {
+                    name: "Marlane",
+                    short_description: "a pugalist",
+                    description: "Perhaps a pit fighter down at the docks, or a boxing coach who trained you?"
+                }
+            ],
+            items: [
+                {
+                    name: "Fine hand weapon",
+                    load: 1
+                },
+                {
+                    name: "Fine heavy weapon",
+                    load: 2
+                },
+            ],
+            xp: "You addressed a challenge with violence or coercion"
+        }
+    ]

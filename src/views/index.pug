@@ -1,16 +1,58 @@
-h1 Blades in The Dark Character Creation 
+mixin playbook(pb)
+    input(type="radio" id=pb name="playbook" value=pb onclick="BCC.playbookChange()")
+    label(for=pb) #{pb}
 
-form
-    p Playbook
-    input(type="radio" id="cutter" name="playbook" value="Cutter")
-    label(for="cutter") Cutter
-    input(type="radio" id="hound" name="playbook" value="Hound")
-    label(for="hound") Hound
+mixin heritage(heritage)
+    input(type="radio" id=heritage name="playbook" value=heritage)
+    label(for=heritage) #{heritage}
 
-    p Heritage
-    input(type="radio" id="akoros" name="playbook" value="Akoros")
-    label(for="akoros") Akoros
-    input(type="radio" id="the-dagger-isles" name="playbook" value="The Dagger Isles")
-    label(for="the-dagger-isles") The Dagger Isles
+mixin background(background)
+    input(type="radio" id=background name="background" value=background)
+    label(for=background) #{background}
 
-    input(type="submit" value="Output")
+include /src/data.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+
+html
+    head
+        title Blades in the Dark Character Creator
+        meta(charset="utf-8")
+        //- link(href=require('/src/style/index.scss') rel='stylesheet')
+    body
+
+        h1 Blades in The Dark Character Creation 
+
+        form
+            p Playbook
+            +playbook("Cutter")
+            +playbook("Hound")
+            +playbook("Leech")
+            +playbook("Lurk")
+            +playbook("Slide")
+            +playbook("Spider")
+            +playbook("Whisper")
+
+            p Heritage
+            each h in DATA.HERITAGES
+                +heritage(h)
+
+            p Background
+            each b in DATA.BACKGROUNDS
+                +background(b)
+
+            p Dots
+            p Special
+            p Friend/Rival
+            p Vice
+            p Info
+
+            br
+
+            input(type="submit" value="Output")
+
+        script(src=require("/src/main.js"))

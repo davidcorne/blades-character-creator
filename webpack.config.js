@@ -1,7 +1,10 @@
 const path = require('path');
 const PugPlugin = require('pug-plugin');
 
+const MODE = process.env.MODE || "production"
+
 module.exports = {
+  mode: MODE,
   output: {
     path: path.join(__dirname, 'dist/'),
   },
